@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FileReader</title>
+</head>
+
+<body>
+  <input type="file" onchange="handleFileSelect()" id="file">
+
+  <script>
+    function handleFileSelect() {
+      const f = file.files[0]
+      console.log(f.lastModified);
+      const reader = new FileReader()
+      reader.onload = function (e) {
+        console.log(this.result)
+        console.log(e);
+      }
+      reader.readAsDataURL(f)
+    }
+  </script>
+</body>
+
+</html>
