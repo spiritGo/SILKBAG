@@ -4,10 +4,10 @@
 
 - 常规使用
 
-```javascript
-const reader = new FileReader();
-reader.onload = function () {
-  // ...
-};
-reader.readAsDataURL(file);
-```
+  ```javascript
+  const reader = new FileReader();
+  reader.onload = function () {
+    // ...
+  };
+  reader.readAsDataURL(file);
+  ```
