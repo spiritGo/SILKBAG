@@ -82,7 +82,7 @@
   git fetch
   ```
 
-- 将远端分支合并带本地分支
+- 将远端分支合并到本地分支
 
   ```bash
   git merge
@@ -106,32 +106,38 @@
 
 - 列出当前分支的版本历史
 
-  ```
+  ```bash
+  git log
   ```
 
 - 列出文件的版本历史, 包括重命名
 
-  ```
+  ```bash
+  git log --follow [file]
   ```
 
 - 展示两个分支之间的内容差异
 
-  ```
+  ```bash
+  git diff [first-bransh]...[second-branch]
   ```
 
 - 输出指定 commit 的元数据和内容变化
 
-  ```
+  ```bash
+  git show [commit]
   ```
 
 - 将文件进行快照处理用于版本控制
 
-  ```
+  ```bash
+  git add [file]
   ```
 
 - 将文件快照永久的记录在版本历史中
 
-  ```
+  ```bash
+  git commit -m "[descriptive message]"
   ```
 
 ### 重做提交
@@ -140,13 +146,17 @@
 
 - 撤销所有 commit 后的提交, 在本地保存更改
 
-  ```
+  ```bash
+  git reset [commit]
   ```
 
 - 放弃所有历史, 改回指定提交
 
+  ```bash
+  git reset --hard [commit]
   ```
-  ```
+  
+  注意: 更改历史可能带来不良后果。如果你需要更改 GitHub（远端）已有的提交，请谨慎操作
 
 ### .gitignore 文件
 
